@@ -17,7 +17,7 @@ import AccountSetting from '../staff/account_setting';
 import Promotion from '../promotion/promotion';
 import ThisMonth from '../promotion/this_month';
 import ComingMonth from '../promotion/coming_month';
-
+import SingnUp from '../signup/signup'
 const MainRoute = () => {
 
     return (
@@ -26,6 +26,7 @@ const MainRoute = () => {
             {window.location.pathname === '/Login' ? null : <div><Navbar /> </div>}
             <Switch>
                 <Route path='/login' component={LoginScreen} />
+                <Route path='/signup' component={SingnUp}/>
                 <Route path='/dashboard' component={Dashboard} />
                 <Route path='/food_gallery' component={FoodGallery} />
                 <Route path='/reservation' component={Reservation} />
@@ -40,7 +41,6 @@ const MainRoute = () => {
                 <Route path='/promotion' component={Promotion} />
                 <Route path='/this_month' component={ThisMonth} />
                 <Route path='/coming_month' component={ComingMonth} />
-
                 <Redirect to='/Home' />
             </Switch>
 

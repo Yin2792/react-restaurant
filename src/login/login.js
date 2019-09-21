@@ -2,11 +2,11 @@ import React from 'react'
 import KumoButton from '../elements/kumoButton'
 import { withMedia } from 'react-media-query-hoc';
 import KumoInputBox from '../elements/kumoInputBox';
-
+import { Link } from 'react-router-dom'
 
 const loginPage = (props) => {
     const {pwdView,handleInputChange,_handleClick,handlePwdView}=props
-
+    const textStyle ={bottom:'-10px',position:'relative',textAlign:'center'}
     return (
         <div className='container-fluid' style={{ background: 'linear-gradient(to bottom, #02AAB0 0%, #00CDAC 100%)', height: '100vh' }}>
             <div className='row justify-content-center text-light align-items-center' style={{ height: '100%' }}>
@@ -30,6 +30,9 @@ const loginPage = (props) => {
                             style={{ height: 50 }}
                             onClick={_handleClick}
                         />
+                       <p style={textStyle}>Not Sign In Yet <Link to="/signup" style={{textDecoration:'none'}} >
+                     SIGNUP
+                    </Link> </p>
                     </form>
 
                 </div>
